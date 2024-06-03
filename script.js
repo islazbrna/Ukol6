@@ -1,5 +1,3 @@
-const pocetLidi = 200
-
 const justFood = (pocetLidi) => {
     return `Catering od Just Food byl dodan pro ${pocetLidi} lidi za ${Number(pocetLidi)*500} Kč`
   }
@@ -12,13 +10,15 @@ const justFood = (pocetLidi) => {
     return `Catering od Flavour Haven byl dodan pro ${pocetLidi} lidi za ${Number(pocetLidi)*5000} Kč`
   }
 
-  const createEvent = (nazevUdalosti, catering) => {
-    return `Událost ${nazevUdalosti} s ${catering}`
-  }
+const createEvent = (nazevUdalosti, catering, pocetLidi) => {
+  if (catering == justFood) {
+  return `Událost ${nazevUdalosti} s ${justFood(pocetLidi)} `
+}
+else if (catering == yourMama) {
+  return `Událost ${nazevUdalosti} s ${yourMama(pocetLidi)} `
+}  
+else if (catering == flavourHaven) {
+ return `Událost ${nazevUdalosti} s ${flavourHaven(pocetLidi)} `
+}}
 
-
-console.log(justFood(pocetLidi))
-console.log(yourMama(pocetLidi))
-console.log(flavourHaven(pocetLidi))
-
-console.log(createEvent('inaugurace prezidenta', yourMama(pocetLidi)))
+console.log(createEvent('inaugurace prezidenta', flavourHaven, 10))
