@@ -1,4 +1,4 @@
-const pocetLidi = 20git 
+const pocetLidi = 20
 
 const justFood = (pocetLidi) => {
     return `Catering od Just Food byl dodan pro ${pocetLidi} lidi za ${Number(pocetLidi)*500} Kč`
